@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="msn-4d-xz2">
+            <objects>
+                <navigationController storyboardIdentifier="wantedNavigationVC" id="0Nr-OG-1wu" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Oe-4u-phX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wiE-8B-EeH" kind="relationship" relationship="rootViewController" id="I8S-lI-F03"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RU-0F-2VB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="372"/>
+        </scene>
+        <!--Разыскиваются-->
+        <scene sceneID="Hzt-oB-0gc">
+            <objects>
+                <viewController storyboardIdentifier="wantedVC" automaticallyAdjustsScrollViewInsets="NO" id="wiE-8B-EeH" customClass="WantedViewController" customModule="Justice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dnn-hQ-Ii6"/>
+                        <viewControllerLayoutGuide type="bottom" id="fJm-Bb-bCy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pgt-9Q-Bjs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="99h-dQ-w0v">
+                                <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LostTableViewCell" rowHeight="135" id="vfk-pl-sbE" customClass="LostTableViewCell" customModule="Justice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1" width="320" height="135"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vfk-pl-sbE" id="0XN-5F-LlG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="134"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Egs-X5-wym">
+                                                    <rect key="frame" x="8" y="8" width="72" height="93"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="72" id="D9c-Cp-Xat"/>
+                                                        <constraint firstAttribute="height" constant="93" id="Zbd-Vn-nGY"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="-2" translatesAutoresizingMaskIntoConstraints="NO" id="aFe-CG-oZK">
+                                                    <rect key="frame" x="88" y="8" width="230" height="120"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Na3-bI-KTv">
+                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="дата рождения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4e-Zq-gAb">
+                                                            <rect key="frame" x="0.0" y="15" width="230" height="15"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="пол:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ERs-45-Qfb">
+                                                            <rect key="frame" x="0.0" y="28" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="возраст:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Xl-Wf-Gie">
+                                                            <rect key="frame" x="0.0" y="43" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="рост:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQ4-Jg-c9U">
+                                                            <rect key="frame" x="0.0" y="58" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="род деятельности:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWN-1c-GPZ">
+                                                            <rect key="frame" x="0.0" y="73" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="дата исчезновения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zv6-Wj-q6c">
+                                                            <rect key="frame" x="0.0" y="88" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="обстоятельства:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEE-Zz-EuJ">
+                                                            <rect key="frame" x="0.0" y="103" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="230" id="LYz-QE-hab"/>
+                                                        <constraint firstAttribute="height" constant="120" id="wA0-Qf-2RD"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Egs-X5-wym" firstAttribute="leading" secondItem="0XN-5F-LlG" secondAttribute="leadingMargin" id="5BR-Sy-BGn"/>
+                                                <constraint firstItem="aFe-CG-oZK" firstAttribute="leading" secondItem="Egs-X5-wym" secondAttribute="trailing" constant="8" id="AfE-nQ-K9a"/>
+                                                <constraint firstItem="aFe-CG-oZK" firstAttribute="top" secondItem="0XN-5F-LlG" secondAttribute="top" constant="8" id="CZK-rQ-JDg"/>
+                                                <constraint firstAttribute="bottom" secondItem="aFe-CG-oZK" secondAttribute="bottom" constant="6" id="Clx-40-ozU"/>
+                                                <constraint firstItem="Egs-X5-wym" firstAttribute="top" secondItem="0XN-5F-LlG" secondAttribute="topMargin" id="M2G-sU-hUZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="ageLabel" destination="4Xl-Wf-Gie" id="Gkb-9h-2dl"/>
+                                            <outlet property="birthdayLabel" destination="F4e-Zq-gAb" id="qtF-sp-xkL"/>
+                                            <outlet property="genderLabel" destination="ERs-45-Qfb" id="deF-0l-eh0"/>
+                                            <outlet property="heghtLabel" destination="bQ4-Jg-c9U" id="p8a-xH-h4b"/>
+                                            <outlet property="jobLabel" destination="bWN-1c-GPZ" id="rMc-YP-V3G"/>
+                                            <outlet property="lostDateLabel" destination="zv6-Wj-q6c" id="xQw-ch-DqR"/>
+                                            <outlet property="lostDetailLabel" destination="NEE-Zz-EuJ" id="Clh-lY-gSb"/>
+                                            <outlet property="lostImage" destination="Egs-X5-wym" id="KTs-87-f9y"/>
+                                            <outlet property="nameLabel" destination="Na3-bI-KTv" id="9Ie-Nh-02G"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WantedTableViewCell" rowHeight="105" id="mSx-Kj-aCO" customClass="WantedTableViewCell" customModule="Justice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="136" width="320" height="105"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mSx-Kj-aCO" id="hMJ-bA-taN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7EQ-RV-cud">
+                                                    <rect key="frame" x="8" y="8" width="72" height="75"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="Nh5-Z8-21b"/>
+                                                        <constraint firstAttribute="width" constant="72" id="a6B-nS-6yV"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lCW-cb-Zbl">
+                                                    <rect key="frame" x="88" y="8" width="230" height="85"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3g-gf-eQc">
+                                                            <rect key="frame" x="0.0" y="0.0" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="дата рождения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsH-aA-quq">
+                                                            <rect key="frame" x="0.0" y="17" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="дата исчезновения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ai1-NA-9l8">
+                                                            <rect key="frame" x="0.0" y="34" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="вид розыска:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5y-Pb-6y5">
+                                                            <rect key="frame" x="0.0" y="51" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="место рождения:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJC-RD-Q4l">
+                                                            <rect key="frame" x="0.0" y="68" width="230" height="17"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="230" id="nWa-i8-1Ze"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lCW-cb-Zbl" firstAttribute="top" secondItem="7EQ-RV-cud" secondAttribute="top" id="73N-JI-qOz"/>
+                                                <constraint firstItem="7EQ-RV-cud" firstAttribute="leading" secondItem="hMJ-bA-taN" secondAttribute="leading" constant="8" id="Yox-kQ-YrZ"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lCW-cb-Zbl" secondAttribute="bottom" constant="3" id="ej6-27-gjt"/>
+                                                <constraint firstItem="lCW-cb-Zbl" firstAttribute="leading" secondItem="7EQ-RV-cud" secondAttribute="trailing" constant="8" symbolic="YES" id="jPP-4e-z7S"/>
+                                                <constraint firstItem="7EQ-RV-cud" firstAttribute="top" secondItem="hMJ-bA-taN" secondAttribute="top" constant="8" id="n6t-BI-vuq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="birthPlaceLabel" destination="kJC-RD-Q4l" id="ubP-du-c9G"/>
+                                            <outlet property="birthdayLabel" destination="fsH-aA-quq" id="TQl-7Z-oKC"/>
+                                            <outlet property="lostDateLabel" destination="ai1-NA-9l8" id="McP-Ou-dYu"/>
+                                            <outlet property="nameLabel" destination="N3g-gf-eQc" id="bPW-Fc-HcB"/>
+                                            <outlet property="photoImageView" destination="7EQ-RV-cud" id="gLR-u2-g9a"/>
+                                            <outlet property="searchKindLabel" destination="z5y-Pb-6y5" id="kLx-Ad-sNq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="wiE-8B-EeH" id="1DX-JA-bPo"/>
+                                    <outlet property="delegate" destination="wiE-8B-EeH" id="HFU-dn-0wl"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="631-9e-r5l">
+                                <rect key="frame" x="51" y="72" width="219" height="29"/>
+                                <segments>
+                                    <segment title="Пропавшие"/>
+                                    <segment title="Разыскиваются"/>
+                                </segments>
+                                <color key="tintColor" red="0.2274509804" green="0.28627450980000002" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmentControllValueDidChange:" destination="wiE-8B-EeH" eventType="valueChanged" id="uGU-hE-nIl"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="99h-dQ-w0v" firstAttribute="top" secondItem="Dnn-hQ-Ii6" secondAttribute="bottom" constant="40" id="NAo-eB-zYF"/>
+                            <constraint firstAttribute="trailing" secondItem="99h-dQ-w0v" secondAttribute="trailing" id="RF4-D2-c6Q"/>
+                            <constraint firstItem="99h-dQ-w0v" firstAttribute="leading" secondItem="pgt-9Q-Bjs" secondAttribute="leading" id="rlc-r5-btO"/>
+                            <constraint firstItem="fJm-Bb-bCy" firstAttribute="top" secondItem="99h-dQ-w0v" secondAttribute="bottom" id="wbG-NF-fqm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Разыскиваются" id="Rvn-ML-3ah"/>
+                    <connections>
+                        <outlet property="segmentedControll" destination="631-9e-r5l" id="PXz-zB-bf8"/>
+                        <outlet property="tableView" destination="99h-dQ-w0v" id="3bE-qV-sGN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pUp-I1-yay" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="372"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="R7Y-9R-yhQ">
+            <objects>
+                <navigationController storyboardIdentifier="addOffenseNavigationVC" id="n7s-EP-PWr" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pxY-SR-zz7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="CoA-0R-doC" kind="relationship" relationship="rootViewController" id="21w-jR-b5U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csB-bb-l0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="462"/>
+        </scene>
+        <!--Сообщить о событии-->
+        <scene sceneID="dDZ-An-9gU">
+            <objects>
+                <viewController storyboardIdentifier="addOffenseVC" id="CoA-0R-doC" customClass="AddOffenseViewController" customModule="Justice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="we1-pe-bWo"/>
+                        <viewControllerLayoutGuide type="bottom" id="rZD-RT-sYq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pr8-gQ-GiM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Кража" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wvn-lK-cew">
+                                <rect key="frame" x="20" y="92" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="selectTypeDidTap:" destination="CoA-0R-doC" eventType="editingDidBegin" id="zIx-6N-mOm"/>
+                                    <outlet property="delegate" destination="CoA-0R-doC" id="yk5-0U-K9C"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Выберите тип правонарушения" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-GY-Dqf">
+                                <rect key="frame" x="20" y="72" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Содержание" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K15-yA-QHP">
+                                <rect key="frame" x="20" y="238" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Bh-gI-pZ4">
+                                <rect key="frame" x="20" y="257" width="280" height="86"/>
+                                <string key="text">Сейчаc нахожусь по адресу ул. Сумская 85. Двое неизвестных в масках грабят магазин ювелирных украшений "Золотой Оскар". Прилагаю фотографии.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QTf-OU-hL5">
+                                <rect key="frame" x="20" y="355" width="280" height="30"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.28627450980000002" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Добавить фото">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_dtp" translatesAutoresizingMaskIntoConstraints="NO" id="lK6-pG-Kqf">
+                                <rect key="frame" x="20" y="411" width="84" height="78"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="img_fight" translatesAutoresizingMaskIntoConstraints="NO" id="BTm-ce-F1C">
+                                <rect key="frame" x="124" y="411" width="84" height="78"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM1-nC-oHF">
+                                <rect key="frame" x="55" y="511" width="211" height="24"/>
+                                <color key="backgroundColor" red="0.2274509804" green="0.28627450980000002" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Отправить">
+                                    <color key="titleColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendOffenseDidTap:" destination="CoA-0R-doC" eventType="touchUpInside" id="Jpr-oA-YTi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="23.10.2015" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="km5-TK-rkc">
+                                <rect key="frame" x="20" y="149" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="selectTypeDidTap:" destination="CoA-0R-doC" eventType="editingDidBegin" id="EKg-S1-8HV"/>
+                                    <outlet property="delegate" destination="CoA-0R-doC" id="95z-Ys-cBG"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введите дату" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sXL-dN-1OU">
+                                <rect key="frame" x="20" y="130" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ул. Сумская, 85" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ait-sE-68Z">
+                                <rect key="frame" x="20" y="204" width="280" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="selectTypeDidTap:" destination="CoA-0R-doC" eventType="editingDidBegin" id="Wod-ul-O6j"/>
+                                    <outlet property="delegate" destination="CoA-0R-doC" id="GED-c3-e6t"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Введите адрес" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59e-hi-ljs">
+                                <rect key="frame" x="20" y="185" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Сообщить о событии" id="pXc-2i-rh4"/>
+                    <connections>
+                        <outlet property="addressTextField" destination="Ait-sE-68Z" id="1mB-QU-6Gm"/>
+                        <outlet property="dateTextField" destination="km5-TK-rkc" id="0rf-HY-bcW"/>
+                        <outlet property="descriptionTextView" destination="8Bh-gI-pZ4" id="yFf-IA-iHh"/>
+                        <outlet property="firstImage" destination="lK6-pG-Kqf" id="zAt-6L-Ub3"/>
+                        <outlet property="secondImage" destination="BTm-ce-F1C" id="P3D-xh-GBN"/>
+                        <outlet property="typesTextField" destination="Wvn-lK-cew" id="xie-1z-98D"/>
+                        <segue destination="X3G-TK-4dv" kind="show" identifier="showTypesSegue" id="zji-Ng-qx6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xQy-hu-qwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="733" y="462"/>
+        </scene>
+        <!--Select Type View Controller-->
+        <scene sceneID="IcS-dW-aab">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="X3G-TK-4dv" customClass="SelectTypeViewController" customModule="Justice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fD7-AK-Jdw"/>
+                        <viewControllerLayoutGuide type="bottom" id="vUy-DI-vPx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="46Z-2w-GjD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Tq-zX-KIg">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="OffenseTypeTableViewCell" id="SeA-IG-yXx" customClass="OffenseTypeTableViewCell" customModule="Justice" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SeA-IG-yXx" id="W9f-9S-VFq">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hy8-mW-qIc">
+                                                    <rect key="frame" x="14" y="9" width="25" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="3Hd-nT-5hv"/>
+                                                        <constraint firstAttribute="width" constant="25" id="8le-Gy-6AB"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0j-UK-ESA">
+                                                    <rect key="frame" x="47" y="11" width="216" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="216" id="Ew8-dW-q7O"/>
+                                                        <constraint firstAttribute="height" constant="21" id="Qvy-dP-LxD"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="y0j-UK-ESA" firstAttribute="leading" secondItem="hy8-mW-qIc" secondAttribute="trailing" constant="8" id="75w-12-dg2"/>
+                                                <constraint firstItem="y0j-UK-ESA" firstAttribute="centerY" secondItem="W9f-9S-VFq" secondAttribute="centerY" id="Ejc-em-Dsk"/>
+                                                <constraint firstItem="hy8-mW-qIc" firstAttribute="centerY" secondItem="W9f-9S-VFq" secondAttribute="centerY" id="Gp6-sg-BnI"/>
+                                                <constraint firstItem="hy8-mW-qIc" firstAttribute="leading" secondItem="W9f-9S-VFq" secondAttribute="leading" constant="14" id="Jud-su-JWr"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="typeImageView" destination="hy8-mW-qIc" id="8bM-hT-3b4"/>
+                                            <outlet property="typeLabel" destination="y0j-UK-ESA" id="7HR-Cn-ZKG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="X3G-TK-4dv" id="8wa-vK-V2c"/>
+                                    <outlet property="delegate" destination="X3G-TK-4dv" id="uCq-MP-H7S"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Tq-zX-KIg" firstAttribute="top" secondItem="fD7-AK-Jdw" secondAttribute="bottom" id="2a4-4h-ZK5"/>
+                            <constraint firstAttribute="trailing" secondItem="4Tq-zX-KIg" secondAttribute="trailing" id="jMw-Qp-7cr"/>
+                            <constraint firstItem="4Tq-zX-KIg" firstAttribute="leading" secondItem="46Z-2w-GjD" secondAttribute="leading" id="x1c-5m-xh2"/>
+                            <constraint firstItem="vUy-DI-vPx" firstAttribute="top" secondItem="4Tq-zX-KIg" secondAttribute="bottom" id="xif-bd-KBR"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="4Tq-zX-KIg" id="xeM-uV-g9e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bL-Kv-UYh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179" y="462"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="img_dtp" width="86" height="64"/>
+        <image name="img_fight" width="83" height="83"/>
+    </resources>
+</document>

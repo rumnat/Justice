@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bXF-oG-7fI">
+            <objects>
+                <navigationController storyboardIdentifier="mapNavigationVC" id="jW7-TF-1BG" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u2n-RN-9Sv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hy1-Zm-Xge" kind="relationship" relationship="rootViewController" id="EU9-Ep-MZX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1an-Hp-BLc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-445" y="465"/>
+        </scene>
+        <!--Карта-->
+        <scene sceneID="EaT-ha-EfY">
+            <objects>
+                <viewController storyboardIdentifier="MapVC" id="hy1-Zm-Xge" customClass="MapViewController" customModule="Justice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="N9g-8V-4eS"/>
+                        <viewControllerLayoutGuide type="bottom" id="WiY-V2-e5U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oOg-W4-Lvr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wy0-ZT-MuA" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" momentary="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3v-Xv-JfS">
+                                <rect key="frame" x="38" y="80" width="243" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="vJj-Yb-UVi"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="За день"/>
+                                    <segment title="За неделю"/>
+                                    <segment title="За месяц"/>
+                                </segments>
+                                <color key="tintColor" red="0.2274509804" green="0.28627450980000002" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="E3v-Xv-JfS" firstAttribute="leading" secondItem="oOg-W4-Lvr" secondAttribute="leading" constant="38" id="BnP-hg-65f"/>
+                            <constraint firstItem="E3v-Xv-JfS" firstAttribute="top" secondItem="N9g-8V-4eS" secondAttribute="bottom" constant="16" id="MXh-7H-Ph3"/>
+                            <constraint firstAttribute="trailing" secondItem="E3v-Xv-JfS" secondAttribute="trailing" constant="39" id="Qaj-Io-ZIq"/>
+                            <constraint firstItem="WiY-V2-e5U" firstAttribute="top" secondItem="wy0-ZT-MuA" secondAttribute="bottom" id="fSW-q1-RP0"/>
+                            <constraint firstItem="wy0-ZT-MuA" firstAttribute="top" secondItem="N9g-8V-4eS" secondAttribute="bottom" id="hpv-7d-nxn"/>
+                            <constraint firstAttribute="trailing" secondItem="wy0-ZT-MuA" secondAttribute="trailing" id="tzY-te-weE"/>
+                            <constraint firstItem="wy0-ZT-MuA" firstAttribute="leading" secondItem="oOg-W4-Lvr" secondAttribute="leading" id="zKD-ZK-9Pe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Карта" id="yZD-xo-ZhC"/>
+                    <connections>
+                        <outlet property="mapView" destination="wy0-ZT-MuA" id="Orf-gq-nGl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7DW-pp-dpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="39" y="465"/>
+        </scene>
+    </scenes>
+</document>
